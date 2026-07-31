@@ -1,0 +1,48 @@
+generated: '2026-07-20'
+method: searched
+source: https://github.com/neubirdai/falconclaw-skills
+description: >-
+  NeuBird publishes an official community Agent Skills hub (FalconClaw SkillsHub)
+  as a public GitHub repository. Each skill is a directory under skills/ with a
+  SKILL.md carrying YAML frontmatter (name, description, tags, homepage,
+  metadata.neubird) followed by a markdown body (<500 lines). Skills orchestrate
+  the NeuBird platform (via the `neubird` binary / MCP tools) for SRE and
+  incident-operations flows. Captured verbatim from the provider's own repo — not
+  generated.
+format: SKILL.md (frontmatter + markdown)
+repository: https://github.com/neubirdai/falconclaw-skills
+skills:
+  - name: chaos-engineer
+    source: https://github.com/neubirdai/falconclaw-skills/tree/main/skills/chaos-engineer
+  - name: cloud-architect
+    source: https://github.com/neubirdai/falconclaw-skills/tree/main/skills/cloud-architect
+  - name: coding-agent
+    source: https://github.com/neubirdai/falconclaw-skills/tree/main/skills/coding-agent
+  - name: create-github-issue
+    source: https://github.com/neubirdai/falconclaw-skills/tree/main/skills/create-github-issue
+  - name: deploy-gate
+    source: https://github.com/neubirdai/falconclaw-skills/tree/main/skills/deploy-gate
+  - name: deploy-review
+    source: https://github.com/neubirdai/falconclaw-skills/tree/main/skills/deploy-review
+  - name: devops-engineer
+    source: https://github.com/neubirdai/falconclaw-skills/tree/main/skills/devops-engineer
+  - name: incident-comms
+    source: https://github.com/neubirdai/falconclaw-skills/tree/main/skills/incident-comms
+  - name: kubernetes-specialist
+    source: https://github.com/neubirdai/falconclaw-skills/tree/main/skills/kubernetes-specialist
+  - name: migration-monitor
+    source: https://github.com/neubirdai/falconclaw-skills/tree/main/skills/migration-monitor
+  - name: monitoring-expert
+    source: https://github.com/neubirdai/falconclaw-skills/tree/main/skills/monitoring-expert
+  - name: rca-template
+    source: https://github.com/neubirdai/falconclaw-skills/tree/main/skills/rca-template
+  - name: remediation-steps
+    source: https://github.com/neubirdai/falconclaw-skills/tree/main/skills/remediation-steps
+  - name: security-reviewer
+    source: https://github.com/neubirdai/falconclaw-skills/tree/main/skills/security-reviewer
+  - name: sev-hunt
+    source: https://github.com/neubirdai/falconclaw-skills/tree/main/skills/sev-hunt
+  - name: sre-engineer
+    source: https://github.com/neubirdai/falconclaw-skills/tree/main/skills/sre-engineer
+  - name: weekend-check
+    source: https://github.com/neubirdai/falconclaw-skills/tree/main/skills/weekend-check

@@ -1,7 +1,30 @@
 aid: neubird
+accessModel:
+  pricing: unknown
+  onboarding: self-serve
+  trial: false
+  try_now: false
+  public: false
+  label: Self-serve signup
+  confidence: medium
+  source:
+  - authentication
+  generated: '2026-07-22'
+  method: derived
+image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/neubird.png
 name: Neubird
-description: Neubird is a company surfaced as a portfolio company of mayfield and added to the API Evangelist
-  network as a stub for enrichment. This profile is a lead awaiting the enrichment pipeline.
+description: >-
+  NeuBird AI is "The Production Operations Agent" — an autonomous AI SRE platform
+  that investigates, triages, and resolves production incidents. It connects to an
+  organization's existing observability and operations stack (Datadog, Splunk,
+  CloudWatch, PagerDuty, ServiceNow, Slack, Kubernetes, AWS, Azure, OpenShift and
+  30+ other tools) and delivers evidence-backed root-cause analysis in under three
+  minutes without human investigation for L1/L2 incidents. NeuBird exposes its
+  capabilities to developers and AI assistants through an official Model Context
+  Protocol (MCP) server (@neubirdai/mcp-server-neubird, 33 tools), the NeuBird API
+  at api.neubird.ai (Auth0-issued JWT bearer auth), a published community Agent
+  Skills hub (FalconClaw SkillsHub, 17 skills), and the Neubird Falcon desktop
+  workspace. Backed by Mayfield.
 url: https://raw.githubusercontent.com/api-evangelist/neubird/refs/heads/main/apis.yml
 x-type: company
 x-source: vc-portfolio
@@ -11,10 +34,35 @@ x-tier: stub
 x-tier-reason: portfolio-lead
 specificationVersion: '0.20'
 created: '2026-07-17'
-modified: '2026-07-17'
+modified: '2026-07-20'
 tags:
 - Company
-apis: []
+- Artificial Intelligence
+- AI SRE
+- Incident Response
+- Observability
+- DevOps
+- AIOps
+- Root Cause Analysis
+- Model Context Protocol
+- Agentic AI
+apis:
+- name: NeuBird API
+  description: >-
+    The NeuBird production-operations API — projects, connections, investigation
+    sessions, and root-cause analysis. Documented and driven through the official
+    MCP server; authenticated with an Auth0-issued JWT bearer token.
+  humanURL: https://docs.neubird.ai
+  baseURL: https://api.neubird.ai
+  properties:
+  - type: Documentation
+    url: https://docs.neubird.ai
+  - type: APIReference
+    url: https://docs.neubird.ai/mcp/reference/tools/
+  - type: MCPServer
+    url: mcp/neubird-mcp.yml
+  - type: Authentication
+    url: authentication/neubird-authentication.yml
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
@@ -23,3 +71,54 @@ maintainers:
 common:
 - type: Website
   url: https://neubird.ai
+- type: DeveloperPortal
+  url: https://docs.neubird.ai
+- type: Documentation
+  url: https://docs.neubird.ai
+- type: APIReference
+  url: https://docs.neubird.ai/mcp/reference/tools/
+- type: Quickstart
+  url: https://docs.neubird.ai/mcp/getting-started/installation/
+- type: MCPServer
+  url: mcp/neubird-mcp.yml
+- type: Packages
+  url: packages/neubird-packages.yml
+- type: SDKs
+  url: packages/neubird-packages.yml
+- type: AgentSkill
+  url: skills/_index.yml
+- type: LLMsTxt
+  url: llms/neubird-llms.txt
+- type: Authentication
+  url: authentication/neubird-authentication.yml
+- type: Conventions
+  url: conventions/neubird-conventions.yml
+- type: Conformance
+  url: conformance/neubird-conformance.yml
+- type: Compliance
+  url: https://trust.neubird.ai/
+- type: TrustCenter
+  url: security/neubird-trust-center.yml
+- type: DomainSecurity
+  url: security/neubird-domain-security.yml
+- type: Sandbox
+  url: sandbox/neubird-sandbox.yml
+- type: GitHubOrganization
+  url: https://github.com/neubirdai
+- type: Blog
+  url: https://neubird.ai/blog
+- type: Pricing
+  url: https://neubird.ai/pricing
+- type: SignUp
+  url: https://app.neubird.ai
+- type: Support
+  url: https://neubird.ai/contact
+- type: TermsOfService
+  url: https://neubird.ai/legal
+- type: PrivacyPolicy
+  url: https://neubird.ai/legal
+x-enrichment:
+  date: '2026-07-20'
+  status: enriched
+  artifacts_added: 11
+  pass: local-v1

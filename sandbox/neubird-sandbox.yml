@@ -1,0 +1,29 @@
+generated: '2026-07-20'
+method: searched
+source: https://neubird.ai/playground
+sandbox:
+  playground:
+    url: https://neubird.ai/playground
+    description: >-
+      Public, no-signup interactive playground to try NeuBird AI live against
+      real AWS telemetry — investigate a sample incident end to end without
+      creating an account or supplying credentials.
+    signup_required: false
+  free_trial:
+    url: https://neubird.ai/pricing
+    length_days: 14
+    includes:
+      - 50 credits
+      - up to 5 users
+      - 1 project
+      - Slack & Teams connections
+      - 14 days of historical storage
+    credit_card_required: false
+    description: >-
+      14-day free trial of the full platform. Credits are consumed when NeuBird
+      agents actively investigate incidents or answer operational questions;
+      alert ingestion and Triage Agent monitoring are included at no charge.
+notes: >-
+  NeuBird publishes no synthetic test cards / magic test identifiers (it is not a
+  payments or messaging provider); the playground and free trial are the test
+  surface. No fabricated test values.

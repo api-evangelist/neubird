@@ -1,0 +1,45 @@
+# generated: '2026-07-20'
+# method: searched
+# source: https://neubird.ai/llms.txt
+# NeuBird AI
+
+NeuBird AI is The Production Operations Agent platform that autonomously investigates, triages, and resolves
+production incidents. It connects to your existing observability and operations stack — Datadog,
+Splunk, CloudWatch, PagerDuty, ServiceNow, Slack, Kubernetes, and 30+ other tools — and delivers
+evidence-backed root cause analysis in under 3 minutes, without requiring human investigation for
+L1 and L2 incidents. Used by SRE, DevOps, and Platform Engineering teams at enterprises running
+AWS, Azure, and OpenShift environments.
+
+Key metrics: 87% MTTR reduction, 90% alert noise suppression, <3 min average resolution time.
+
+## Core Pages
+- https://neubird.ai/home: Product overview and key capabilities
+- https://neubird.ai/solutions: Full integration catalog — AWS, Azure, Datadog, PagerDuty, and more
+- https://neubird.ai/pricing: Pricing plans and free trial
+- https://neubird.ai/schedule-demo: Book a demo with the NeuBird team
+- https://neubird.ai/playground: Try NeuBird AI live with real AWS telemetry (no signup required)
+- https://neubird.ai/contact: Contact the NeuBird team
+
+## Product & Platform
+- https://neubird.ai/platform: Platform architecture and agent context engine
+- https://neubird.ai/how-it-works: How NeuBird's agentic AI investigates production incidents
+- https://neubird.ai/platform/security: Security, compliance, and deployment architecture
+- https://neubird.ai/what-is-ai-sre: What is an AI SRE agent?
+- https://neubird.ai/what-is-prod-ops-agent: What is The Production Operations Agent?
+
+## Solutions by Integration
+- https://neubird.ai/solutions/aws: NeuBird for AWS (CloudWatch, EKS, EC2, Lambda, RDS)
+- https://neubird.ai/solutions/microsoft-azure: NeuBird for Microsoft Azure
+- https://neubird.ai/solutions/datadog: NeuBird + Datadog integration
+- https://neubird.ai/solutions/pagerduty: NeuBird + PagerDuty integration
+- https://neubird.ai/solutions/openshift: NeuBird for Red Hat OpenShift
+
+## Learn & Resources
+- https://neubird.ai/blog: Engineering blog — incident response, SRE practices, agentic AI
+- https://neubird.ai/library: Research reports, ebooks, and technical guides
+- https://neubird.ai/events: Upcoming webinars and events
+- https://neubird.ai/neubird-startups: Free daily cloud intelligence reports for startups
+
+## Company
+- https://neubird.ai/company: About NeuBird AI
+- https://neubird.ai/careers: Open roles at NeuBird AI

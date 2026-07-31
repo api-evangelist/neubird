@@ -1,0 +1,46 @@
+generated: '2026-07-20'
+method: searched
+source: https://docs.neubird.ai/mcp/overview/
+description: >-
+  Cross-cutting semantics for the NeuBird API, captured from the documented MCP
+  server surface and platform docs. No public OpenAPI was found, so field-level
+  conventions (pagination params, error envelope) are documented at the level the
+  provider publishes and cross-linked to the authentication artifact.
+authentication:
+  style: bearer-jwt
+  detail: >-
+    Email/password (env vars or X-NeuBird-* headers) exchanged for an Auth0-issued
+    JWT bearer token; see authentication/neubird-authentication.yml.
+  ref: authentication/neubird-authentication.yml
+resource_model:
+  # The API is organized around Projects that group Connections and Investigation
+  # Sessions; investigations produce root-cause analyses (RCA).
+  primary_entities: [project, connection, session, investigation, rca, instruction]
+connections:
+  description: >-
+    Data-source connections (AWS, Datadog, and 30+ observability/ops tools) are
+    created, synced, and attached to projects; sync is asynchronous and polled
+    (neubird_wait_for_connection_sync).
+  async_sync: true
+investigations:
+  description: >-
+    Investigations run asynchronously against alerts; status and chain-of-thought
+    are polled (neubird_get_investigation_status), then RCA and scores are
+    retrieved once complete.
+  async: true
+idempotency:
+  supported: unknown
+  note: >-
+    No documented idempotency-key contract was found; not asserting idempotency
+    support. (No Idempotency pointer emitted.)
+pagination:
+  supported: unknown
+  note: List operations support filtering/search; specific pagination params are
+    not documented publicly.
+error_handling:
+  ref: N/A
+  note: No public error reference or OpenAPI 4xx/5xx catalog was found to derive from.
+cross_links:
+  authentication: authentication/neubird-authentication.yml
+  mcp: mcp/neubird-mcp.yml
+  conformance: conformance/neubird-conformance.yml

@@ -1,0 +1,12 @@
+generated: '2026-07-20'
+method: searched
+probe: true
+source: https://trust.neubird.ai/
+url: https://trust.neubird.ai/
+certifications:
+- SOC 2
+evidence:
+- source: https://trust.neubird.ai/
+  keywords:
+  - soc 2
+  - trust center

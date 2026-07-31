@@ -1,0 +1,113 @@
+generated: '2026-07-20'
+method: searched
+status: published
+source: https://docs.neubird.ai/mcp/overview/
+server:
+  name: neubird
+  description: >-
+    Official Model Context Protocol server for NeuBird AI (The Production
+    Operations Agent). Lets AI assistants like Claude Code, Cursor, and GitHub
+    Copilot drive NeuBird's autonomous incident investigation, root-cause
+    analysis, and remediation capabilities. Runs locally (stdio via npx) or as a
+    remote HTTP server; calls the NeuBird API at https://api.neubird.ai using the
+    caller's credentials.
+  transports:
+    - stdio
+    - http
+  package: '@neubirdai/mcp-server-neubird'
+  registry: npm
+  version: 3.1.0
+  install: npx -y @neubirdai/mcp-server-neubird@latest
+  bin:
+    - mcp-server-neubird
+    - hawkeye-mcp-server
+  repository: https://github.com/neubirdai/mcp-server-neubird
+  docs: https://docs.neubird.ai/mcp/overview/
+authentication:
+  # Local (stdio) via environment variables; Remote (http) via headers.
+  env:
+    - NEUBIRD_EMAIL
+    - NEUBIRD_PASSWORD
+    - NEUBIRD_BASE_URL
+  headers:
+    - X-NeuBird-Email
+    - X-NeuBird-Password
+    - 'Authorization: Bearer <jwt>'
+  notes: >-
+    Bearer tokens are JWTs obtained from the NeuBird login API and validated via
+    Auth0.
+tool_count: 33
+tools:
+  # Projects
+  - name: neubird_list_projects
+    description: Retrieve all available projects with optional inactive filtering.
+  - name: neubird_create_project
+    description: Establish a new project with name and description.
+  - name: neubird_get_project_details
+    description: Obtain comprehensive project information.
+  - name: neubird_update_project
+    description: Modify a project name or description.
+  - name: neubird_delete_project
+    description: Remove a project (requires confirmation).
+  # Connections
+  - name: neubird_list_connections
+    description: Show all configured connections with sync status.
+  - name: neubird_create_aws_connection
+    description: Establish an AWS integration using an IAM role ARN.
+  - name: neubird_create_datadog_connection
+    description: Set up a Datadog connection via API/app keys.
+  - name: neubird_wait_for_connection_sync
+    description: Poll a connection until synchronization completes.
+  - name: neubird_add_connection_to_project
+    description: Link one or more connections to a project.
+  - name: neubird_list_project_connections
+    description: Display connections assigned to a specific project.
+  # Investigations
+  - name: neubird_list_sessions
+    description: Retrieve investigation sessions with filtering and search.
+  - name: neubird_investigate_alert
+    description: Initiate an investigation using an alert ID.
+  - name: neubird_continue_investigation
+    description: Submit follow-up questions to a completed investigation.
+  - name: neubird_get_investigation_status
+    description: Monitor real-time investigation progress and steps.
+  - name: neubird_get_rca
+    description: Extract the complete root cause analysis with remediation steps.
+  - name: neubird_get_chain_of_thought
+    description: Display reasoning steps and investigation logic.
+  - name: neubird_get_investigation_queries
+    description: List queries executed during an investigation.
+  - name: neubird_get_investigation_sources
+    description: Show data sources consulted during analysis.
+  - name: neubird_get_follow_up_suggestions
+    description: Recommend additional investigative questions.
+  - name: neubird_get_rca_score
+    description: Provide quality-assessment metrics for an investigation.
+  # Instructions
+  - name: neubird_list_project_instructions
+    description: List instructions by type and status.
+  - name: neubird_create_project_instruction
+    description: Create FILTER, SYSTEM, GROUPING, or RCA instructions.
+  - name: neubird_validate_instruction
+    description: Verify instruction syntax before application.
+  - name: neubird_apply_session_instruction
+    description: Test an instruction against a specific investigation.
+  - name: neubird_rerun_session
+    description: Re-execute an investigation with updated instructions.
+  # Analytics
+  - name: neubird_inspect_session
+    description: Retrieve session metadata and configuration.
+  - name: neubird_get_session_report
+    description: Generate summary reports for multiple sessions.
+  - name: neubird_get_session_summary
+    description: Provide detailed analysis and performance scoring.
+  - name: neubird_get_incident_report
+    description: Aggregate organization-wide MTTR and metrics.
+  # Discovery
+  - name: neubird_discover_project_resources
+    description: Aggregate all resources across a project's connections.
+  - name: neubird_list_connection_resource_types
+    description: Enumerate available resource types by connection and telemetry.
+  # Help
+  - name: neubird_get_guidance
+    description: Interactive assistance across connections, projects, and troubleshooting.

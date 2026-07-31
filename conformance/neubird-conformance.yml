@@ -1,0 +1,29 @@
+generated: '2026-07-20'
+method: searched
+source: https://docs.neubird.ai/mcp/overview/
+standards:
+  - id: oauth2
+    conforms: true
+    evidence: >-
+      Bearer JWT auth; login exchanges credentials for a token validated via
+      Auth0 (OAuth 2.0 / OIDC identity provider).
+  - id: oidc
+    conforms: true
+    evidence: Identity provided by Auth0 (OpenID Connect).
+  - id: mcp
+    conforms: true
+    evidence: >-
+      Official Model Context Protocol server (@neubirdai/mcp-server-neubird)
+      exposing 33 tools over stdio and HTTP.
+  - id: soc2
+    conforms: true
+    evidence: >-
+      SOC 2 certification listed on the NeuBird Trust Center
+      (https://trust.neubird.ai/); see security/neubird-trust-center.yml.
+  - id: rfc9457-problem-details
+    conforms: false
+    evidence: No public error reference found asserting application/problem+json.
+  - id: fhir-r4
+    conforms: false
+  - id: fapi
+    conforms: false

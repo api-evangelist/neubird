@@ -1,0 +1,38 @@
+generated: '2026-07-20'
+method: searched
+source: https://docs.neubird.ai/mcp/getting-started/installation/
+docs: https://docs.neubird.ai/mcp/overview/
+summary:
+  types: [http, oauth2]
+  http_schemes: [bearer]
+  identity_provider: Auth0
+  notes: >-
+    No public OpenAPI was found, so this profile is derived from NeuBird's
+    documented authentication surface (login API + MCP server credentials) rather
+    than from a securitySchemes block.
+schemes:
+  - name: emailPasswordLogin
+    type: http
+    scheme: basic-credentials
+    description: >-
+      Email + password submitted to the NeuBird login API (or via
+      X-NeuBird-Email / X-NeuBird-Password headers on the remote MCP server) are
+      exchanged for a JWT bearer token.
+    parameters: [NEUBIRD_EMAIL, NEUBIRD_PASSWORD]
+    sources: [https://docs.neubird.ai/mcp/getting-started/installation/]
+  - name: bearerJwt
+    type: http
+    scheme: bearer
+    bearerFormat: JWT
+    description: >-
+      Authorization: Bearer <token>. Tokens are JWTs issued by the NeuBird login
+      API and validated through Auth0.
+    identity_provider: Auth0
+    sources: [https://docs.neubird.ai/mcp/getting-started/installation/]
+connection_credentials:
+  # Per-integration credentials configured against connected data sources.
+  - provider: aws
+    credential: IAM role ARN + external ID
+  - provider: datadog
+    credential: API key + application key
+base_url: https://api.neubird.ai

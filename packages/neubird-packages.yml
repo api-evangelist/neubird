@@ -1,0 +1,38 @@
+generated: '2026-07-20'
+method: searched
+source: https://www.npmjs.com/package/@neubirdai/mcp-server-neubird
+packages:
+  - language: javascript
+    registry: npm
+    name: '@neubirdai/mcp-server-neubird'
+    version: 3.1.0
+    license: MIT
+    url: https://www.npmjs.com/package/@neubirdai/mcp-server-neubird
+    install: npm install @neubirdai/mcp-server-neubird
+    repository: https://github.com/neubirdai/mcp-server-neubird
+    description: MCP Server for NeuBird AI-powered production operations.
+    official: true
+  - language: javascript
+    registry: npm
+    name: mcp-server-neubird
+    version: 3.1.0
+    license: MIT
+    url: https://www.npmjs.com/package/mcp-server-neubird
+    install: npx -y mcp-server-neubird@latest
+    description: Thin redirect shim to the canonical @neubirdai/mcp-server-neubird package.
+    official: true
+  - language: python
+    registry: ansible-galaxy
+    name: neubird ansible_collections
+    url: https://github.com/neubirdai/ansible_collections
+    description: NeuBird AI Ansible Collections.
+    official: true
+  - language: shell
+    registry: homebrew
+    name: neubird-desktop
+    url: https://github.com/neubirdai/homebrew-tap
+    install: brew install --cask neubirdai/tap/neubird-desktop
+    description: >-
+      NeuBird Falcon desktop application (AI-native SRE workspace) distributed as
+      a macOS Homebrew cask. GUI application, not a CLI.
+    official: true

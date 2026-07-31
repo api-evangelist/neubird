@@ -1,0 +1,38 @@
+generated: '2026-07-20'
+method: searched
+source: live probes of NeuBird hosts
+note: >-
+  No genuine /.well-known/ discovery documents are published on NeuBird's own
+  hosts. neubird.ai and api.neubird.ai return 404 for all probed paths;
+  app.neubird.ai is a single-page app whose server returns the SPA HTML shell
+  (HTTP 200) for every path, so its 200s are NOT real well-known documents and
+  are not saved. Authentication is delegated to Auth0, whose OIDC metadata lives
+  on the Auth0 tenant rather than on a NeuBird domain. Recorded as an honest
+  negative result.
+hosts:
+  - host: https://neubird.ai
+    documents:
+      - path: /.well-known/security.txt
+        status: 404
+  - host: https://api.neubird.ai
+    documents:
+      - path: /.well-known/openid-configuration
+        status: 404
+      - path: /.well-known/oauth-authorization-server
+        status: 404
+      - path: /.well-known/security.txt
+        status: 404
+      - path: /.well-known/api-catalog
+        status: 404
+      - path: /.well-known/ai-plugin.json
+        status: 404
+  - host: https://app.neubird.ai
+    documents:
+      - path: /.well-known/openid-configuration
+        status: 200
+        file: null
+        note: SPA catch-all shell, not a real OIDC document
+      - path: /.well-known/security.txt
+        status: 200
+        file: null
+        note: SPA catch-all shell, not a real security.txt
