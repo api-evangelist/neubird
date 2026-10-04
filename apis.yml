@@ -56,7 +56,8 @@ tags:
 - AIOps
 - Root Cause Analysis
 - MCP
-- Agentic AI
+- AI Agents
+- Incident Management
 tags_raw:
 - Company
 - Artificial Intelligence
@@ -68,6 +69,7 @@ tags_raw:
 - Root Cause Analysis
 - Model Context Protocol
 - Agentic AI
+- Incident Management
 apis:
 - name: NeuBird API
   description: >-
