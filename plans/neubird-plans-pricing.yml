@@ -1,0 +1,36 @@
+# Pricing transcribed from the provider's own page — see provenance. Numbers are quoted, not derived.
+generated: '2026-10-07'
+method: searched
+source: https://neubird.ai/pricing
+sources:
+- https://neubird.ai/pricing
+provenance:
+  tool: all/0-working/economics/harvest_pricing.py
+  run: 20261007T104522
+  grounding: every price_text was found verbatim in the fetched page text
+audience: business-product
+pricing_basis: negotiated
+delivery:
+  delivery: managed+licensed
+  method: page
+  read: '2026-10-07'
+  evidence: SaaS or customer VPC/VNET deployment
+published: false
+note: No numeric price is published on the pricing page; Page describes a credit-based model (e.g., Investigation
+  Agent 1 credit/run, Cluster Agent 2 credits/run, ~100 credits/month for 1,000 alerts) but states no
+  monetary price; Enterprise is 'Custom pricing'. Deployment in customer VPC/VNET offered alongside SaaS.
+plan_count: 2
+plans:
+- name: Enterprise
+  price_text: Custom pricing
+  period: none
+  included_quota: SaaS or customer VPC/VNET deployment, purchase credits as needed, unlimited alerts,
+    unlimited users, unlimited projects, Slack & Teams connections, MCP access, 24/7 enterprise support,
+    unlimited historical storage, SOC 2 Type II certified
+  overage: You can purchase additional credits at any time.
+- name: 14 day free trial
+  price_text: 14 day free trial
+  price: 14
+  period: none
+  included_quota: 50 credits, up to 5 users, 1 project, Slack & Teams connections, and 14 days of historical
+    storage. No credit card required.
