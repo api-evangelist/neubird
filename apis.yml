@@ -93,6 +93,8 @@ maintainers:
 - FN: APIs.json
   email: info@apis.io
 common:
+- type: Plans
+  url: plans/neubird-plans-pricing.yml
 - url: https://neubird.ai/blog/feed.xml
   type: BlogRSS
 - type: Website
