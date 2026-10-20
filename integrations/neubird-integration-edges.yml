@@ -4,6 +4,12 @@ checked:
 - datadog/integrations/datadog-integration-edges.yml
 - https://aws.amazon.com/marketplace/
 - https://azuremarketplace.microsoft.com/
+- https://api.github.com
+- https://claude-plugins.dev/sitemap.xml
+- https://github.com/VoltAgent/awesome-agent-skills
+- https://officialskills.sh/sitemap.xml
+- https://skillsmp.com/sitemap.xml
+- https://www.skills.sh/sitemap.xml
 marketplace_apps: []
 edges:
 - partner_name: AWS Marketplace
@@ -54,5 +60,37 @@ edges:
   detected: '2026-10-14'
   detected_by: mirror-platform-listings.py
   category: AI/ML
+- partner_name: Agent Skills (own GitHub org)
+  partner: null
+  partner_match: register
+  type: register
+  direction: provider-built
+  category: Agent Skills package
+  evidence: https://github.com/neubirdai/falconclaw-skills
+  channel: provider-built
+  relationship: compatible
+  shape: agent-skills
+  evidence_kind: own-repo
+  degree: skill-repo
+  report_only: true
+  agent_skills:
+    org: neubirdai
+    current: true
+    repos:
+    - repo: neubirdai/falconclaw-skills
+      archived: false
+      lapsed: false
+      pushed: '2026-10-15'
+  contract_reference:
+    register: 'provider''s own GitHub org (GitHub REST API: repo + git tree holds SKILL.md)'
+    spec_file: null
+    standard: Agent Skills (agentskills.io)
+    role: agent-skills-repo
+    matched_org: neubirdai
+    matched_by: org-profile-domain:neubird.ai
+    detected_by: sweep-agent-skills.py
+    detected: '2026-10-20'
+  detected_by: sweep-agent-skills.py
+  first_seen: '2026-10-20'
 source:
 - datadog/integrations/datadog-integration-edges.yml
